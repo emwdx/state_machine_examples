@@ -1,3 +1,5 @@
+# Code below runs on the Adafruit MacroPad running CircuitPython 7.0 and with all required libraries to support the MacroPad library
+
 import time
 from adafruit_macropad import MacroPad
 from rainbowio import colorwheel
@@ -111,11 +113,11 @@ def reactToState(state):
     elif(state == CHECK_COMBINATION):
         show_combination()
     elif(state == WRONG_COMBINATION):
-        macropad.play_file("DING.mp3")
+        #macropad.play_file("DING.mp3")
     elif(state == UNLOCKED):
         show_pink()
         show_unlocked()
-        macropad.play_file("TADA.mp3")
+        #macropad.play_file("TADA.mp3")
     elif(state == READY):
         wheel_offset += 2  # Glow thru the colorwheel.
         for pixel in range(12):
